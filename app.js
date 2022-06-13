@@ -6,6 +6,7 @@ const routes = require('./src/routes');
 
 (async () => {
     try {
+        app.use(express.json())
         routes(app)
         await db.sync();
         app.listen(port, () => console.log(`Server listening on port ${port}`))

@@ -16,7 +16,7 @@ const Invoice = database.define('invoice', {
         type: Sequelize.STRING,
         allowNull: false
     },
-    callbackMessages: Sequelize.TEXT
+    callbackMessages: Sequelize.JSON
 })
  
 module.exports = Invoice;
