@@ -7,7 +7,6 @@ module.exports = {
 
 async function getAll(request, response) {
     const invoices = await Model.findAll();
-    invoices.forEach(i => i.callbackMessages = JSON.parse(i.callbackMessages))
     return response.json({ invoices })
 }
 
